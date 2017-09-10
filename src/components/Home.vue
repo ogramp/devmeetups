@@ -1,5 +1,6 @@
 <template>
 	<div>
+		<h1>The 8th video in the playlist</h1>
 		<v-container>
 			<v-layout row wrap class="mb-2">
 				<v-flex xs12 sm6 class="text-xs-center text-sm-right">
@@ -11,11 +12,12 @@
 			</v-layout>
 			<v-layout row wrap>
 				<v-flex x12>
-					<v-carousel>
+					<v-carousel style="cursor: pointer;">
 						<v-carousel-item
 							v-for="meetup in meetups"
 							v-bind:src="meetup.imageUrl"
-							:key="meetup.id">
+							:key="meetup.id"
+							@click="onLoadMeetup(meetup.id)">
 							<div class="title">
 								{{ meetup.title }}
 							</div>
@@ -40,6 +42,11 @@ export default {
         {imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/4/47/New_york_times_square-terabass.jpg', id: 'adsaffasdf123153', title: 'Meetup In New York'},
         {imageUrl: 'https://c1.staticflickr.com/3/2463/3598596311_84211f2566_b.jpg', id: 'adsaffaasdfsdf1223143153', title: 'Meetup In Paris'}
       ]
+    }
+  },
+  methods: {
+    onLoadMeetup (id) {
+      this.$router.push('/meetups/' + id)
     }
   }
 }
