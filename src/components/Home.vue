@@ -36,12 +36,9 @@
 
 <script>
 export default {
-  data: function () {
-    return {
-      meetups: [
-        {imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/4/47/New_york_times_square-terabass.jpg', id: 'adsaffasdf123153', title: 'Meetup In New York'},
-        {imageUrl: 'https://c1.staticflickr.com/3/2463/3598596311_84211f2566_b.jpg', id: 'adsaffaasdfsdf1223143153', title: 'Meetup In Paris'}
-      ]
+  computed: {
+    meetups () {
+      return this.$store.getters.featuredMeetups
     }
   },
   methods: {
