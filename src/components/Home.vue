@@ -1,7 +1,7 @@
 <template>
 	<div>
-		<h1>The 8th video in the playlist</h1>
 		<v-container>
+			<h3 class="primary--text text-xs-center">The 11th video in the playlist</h3>
 			<v-layout row wrap class="mb-2">
 				<v-flex xs12 sm6 class="text-xs-center text-sm-right">
 					<v-btn large router to="/meetups" class="info">Explore Meetups</v-btn>
