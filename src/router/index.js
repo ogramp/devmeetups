@@ -18,17 +18,12 @@ export default new Router({
       component: Home
     },
     {
-      path: '/',
-      name: 'Home',
-      component: Home
-    },
-    {
       path: '/meetups',
       name: 'Meetups',
       component: Meetups
     },
     {
-      path: '/meetups/new',
+      path: '/meetup/new',
       name: 'CreateMeetup',
       component: CreateMeetup
     },
